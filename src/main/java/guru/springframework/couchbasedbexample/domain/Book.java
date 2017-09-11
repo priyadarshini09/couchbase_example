@@ -1,4 +1,4 @@
-/*
+
 package guru.springframework.couchbasedbexample.domain;
 
 import com.couchbase.client.java.repository.annotation.Field;
@@ -8,7 +8,7 @@ import org.springframework.data.couchbase.core.mapping.Document;
 @Document
 public class Book {
     @Id
-    private String bookId;
+    private String id;
     @Field
     private String name;
     @Field
@@ -17,18 +17,18 @@ public class Book {
     public Book() {
     }
 
-    public Book(String bookId, String name, long isbnNumber) {
-        this.bookId = bookId;
+    public Book(String id, String name, long isbnNumber) {
+        this.id = id;
         this.name = name;
         this.isbnNumber = isbnNumber;
     }
 
     public String getBookId() {
-        return bookId;
+        return id;
     }
 
     public void setBookId(String bookId) {
-        this.bookId = bookId;
+        this.id = id;
     }
 
     public String getName() {
@@ -50,10 +50,10 @@ public class Book {
     @Override
     public String toString() {
         return "Book{" +
-                "bookId='" + bookId + '\'' +
+                "bookId='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", isbnNumber=" + isbnNumber +
                 '}';
     }
 }
-*/
+
